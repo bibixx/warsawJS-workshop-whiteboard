@@ -1,0 +1,16 @@
+<template name="room">
+  <h3>Jetes w pokoju: <i style="color: #00c109;">„{{room.title}}”</i></h3>
+  <p><a href={{pathFor "App.home"}}>Wróć do menu</a></p>
+  <p>Kolor: <input type="color" id="color" /></p>
+  <p>Losowy kolor: <input type="checkbox" id="random-color" /></p>
+  <p>Wielkość pędzla:
+    <input type="number" id="slider" min="2" max="300" value="2" />
+    <input type="range" id="slider-range" min="2" max="300" value="2" />
+  </p>
+  <p><i id="clear" class="material-icons">clear</i>
+  <i id="fill" class="material-icons">format_color_fill</i>
+  <i id="undo" class="material-icons">undo</i></p>
+  <canvas id="canvas" width="500" height="400"></canvas>
+
+  <div id="cursor"></div>
+</template>

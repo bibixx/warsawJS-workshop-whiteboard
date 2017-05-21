@@ -1,0 +1,12 @@
+<template name="rooms">
+  <h2>Add new room!</h2>
+  <form class="add-room">
+    <input type="text" name="title" placeholder="Title" required>
+    <input type="submit" name="submit" value="Add new link">
+  </form>
+  <ul>
+    {{#each rooms}}
+      <li><a href={{pathFor "App.room" id=_id}}>{{title}}</a>&nbsp;&nbsp;<i id={{_id}} class="material-icons">close</i></li>
+    {{/each}}
+  </ul>
+</template>

@@ -1,0 +1,43 @@
+canvas {
+  display: block;
+  cursor: crosshair;
+  border: 2px solid #000;
+  cursor: none;
+}
+
+i {
+  cursor: pointer;
+  color: #aaa;
+  margin: 0 16px;
+  transition: color .1s ease-in-out;
+}
+
+i:hover {
+  color: #000;
+}
+
+canvas:hover + #cursor {
+  display: block;
+}
+
+#cursor {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  transform: translate( -50%, -50% );
+  pointer-events: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+li i {
+  margin: 0;
+}
